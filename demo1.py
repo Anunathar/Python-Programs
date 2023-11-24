@@ -1,11 +1,21 @@
-import tkinter
 
-root=tkinter.Tk()
-root.title("Button Demo")
-root.geometry('300x200')
+from matplotlib.pyplot import * 
+x1=[0,5,8,16,12]
+y1=[0,3,8,5,15]
 
-b1=tkinter.Button(root, text="Click me", bg='blue', command=root.destroy)
+plot(x1,y1,marker="o", mec='r', ms=10,mfc = "g")
+grid()
+show()
 
-b1.pack()
 
-root.mainloop()
+
+'''
+#import matplotlib.pyplot as plt
+from matplotlib.pyplot import * 
+
+x1=[0,3,5,12]
+y1=[0,15,10,8]
+
+plot(x1,y1,marker='D' , ms=10)
+show()
+'''

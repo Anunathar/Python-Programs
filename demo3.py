@@ -1,20 +1,16 @@
-from tkinter import *
-root=Tk()
-root.title("Button Demo")
-root.geometry('300x200')
-b1=Button(root, text="Click me", bg='blue', command=root.destroy)
-b1.pack()
-root.mainloop()
+import matplotlib.pyplot as plt
 
+fig,ax = plt.subplots()
 
-import tkinter
+fruits = ['apple', 'blueberry', 'cherry', 'orange']
+counts = [40, 100, 30, 55]
+bar_labels = ['red', 'blue', '_red', 'orange']
+bar_colors = ['tab:red', 'tab:blue', 'tab:red', 'tab:orange']
+f1={'font family':'Impact', 'color': 'light green', 'size': 20}
+ax.bar(fruits, counts, label=bar_labels, color=bar_colors)
 
-root=tkinter.Tk()
-root.title("Button Demo")
-root.geometry('300x200')
+ax.set_ylabel('fruit supply')
+ax.set_title('Fruit supply by kind and color')
+ax.legend(title='Fruit color')
 
-b1=tkinter.Button(root, text="Click me", bg='blue', command=root.destroy)
-
-b1.pack()
-
-root.mainloop()
+plt.show()
